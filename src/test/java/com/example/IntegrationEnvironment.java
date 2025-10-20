@@ -1,3 +1,5 @@
+package com.example;
+
 import com.google.common.collect.ImmutableMap;
 import dev.failsafe.Failsafe;
 import dev.failsafe.RetryPolicy;

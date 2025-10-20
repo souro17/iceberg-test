@@ -1,3 +1,5 @@
+package com.example;
+
 import lombok.extern.slf4j.Slf4j;
 import org.apache.iceberg.*;
 import org.apache.iceberg.catalog.Namespace;
