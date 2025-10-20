@@ -42,7 +42,7 @@ public class IntegrationEnvironment {
 
 
     NessieContainer nessie = NessieContainer.builder()
-            .dockerImage("registry.stage.c8y.io/ghcr-proxy/projectnessie/nessie")
+            .dockerImage("ghcr.io/projectnessie/nessie")
             .dockerTag("0.105.4")
             .build()
             .createContainer()
@@ -65,7 +65,7 @@ public class IntegrationEnvironment {
                     .put("nessie.catalog.service.s3.default-options.path-style-access", "true")
                     .build())
             .withStartupTimeout(Duration.ofMinutes(2));
-    MinIOContainer minio = new MinIOContainer(DockerImageName.parse("registry.stage.c8y.io/c8y-proxy/minio/minio:RELEASE.2025-09-07T16-13-09Z")
+    MinIOContainer minio = new MinIOContainer(DockerImageName.parse("minio/minio:RELEASE.2025-09-07T16-13-09Z")
             .asCompatibleSubstituteFor("minio/minio"))
             .withNetworkAliases("minio")
             .withNetwork(network)
